@@ -1,0 +1,3 @@
+[submodule "modules/Biomass_borealDataPrep"]
+	path = modules/Biomass_borealDataPrep
+	url = git@github.com:PredictiveEcology/Biomass_borealDataPrep.git
