@@ -31,3 +31,4 @@ R/
 inputs/
 modules/
 outputs/
+.secret
