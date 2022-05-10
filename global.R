@@ -5,7 +5,7 @@ installSpaDES()
 
 ## download modules -- no loading of R packages yet
 modulePath <- "modules"
-moduleGitRepos <- c('Biomass_borealDataPrep')
+moduleGitRepos <- c('Biomass_borealDataPrep@development')
 getModule(moduleGitRepos, modulePath = modulePath, overwrite = FALSE)
 
 ## packages that are required by modules -- no loading of R packages yet
