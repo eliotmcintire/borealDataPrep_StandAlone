@@ -1,14 +1,14 @@
-## install/load required packages
+## install/load only Require; then install all R packages necessary for using SpaDES --> no loading
 if (!require("Require")) {install.packages("Require"); require("Require")}
 Require("PredictiveEcology/SpaDES.install")
 installSpaDES()
-modulePath <- "modules"
 
-## download modules
+## download modules -- no loading of R packages yet
+modulePath <- "modules"
 moduleGitRepos <- c('Biomass_borealDataPrep')
 getModule(moduleGitRepos, modulePath = modulePath, overwrite = FALSE)
 
-## packages that are required by modules
+## packages that are required by modules -- no loading of R packages yet
 makeSureAllPackagesInstalled(modulePath)
 
 ## Module documentation -- please go to these pages to read about each module
