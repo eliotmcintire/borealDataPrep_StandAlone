@@ -31,10 +31,12 @@ setPaths(cachePath = "cache",
 ## or more of the modules, e.g., they may only be defined with calendar dates
 simTimes <- list(start = 2011, end = 2011)
 
-googledrive::drive_auth(cache = ".secret", email = "eliotmcintire@gmail.com")
+googledrive::drive_auth()
 studyArea <- Cache(prepInputs, url = "https://drive.google.com/file/d/1DzVRglqJNvZA8NZZ7XKe3-6Q5f8tlydQ/view?usp=sharing",
-                   fun = "raster::shapefile")
+                   fun = "raster::shapefile", destinationPath = getPaths()$inputPath)
+op <- setwd(getPaths()$inputPath)
 species <- Cache(LandR::speciesInStudyArea, studyArea)
+setwd(op)
 # There may be some that are "only genus", as indicated by "Spp" in the name.
 #   We should check whether they are relevant for our study area,
 #   but we will take the short cut here to just remove them. They are primarily relevant in
